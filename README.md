@@ -10,7 +10,7 @@ All analyses were proerfomed using the available toolboxes: MATLAB R2022a ([http
 
 Statistical Analyses and Source Data
 
-For transparency and in order to reconstruct/replicate our results, we upload the MATLAB script (Analysis.m) to analyze the data we used within our manuscript (SourceData.mat). The data file contains the source data (data), class labels (label), and pretrained weights (weights). 
+For transparency and in order to reconstruct/replicate our results, we upload the MATLAB script (Analysis.m) to analyze the data we used within our manuscript (SourceData.mat). The data file contains the source data (data), class labels (label), model performance (perf), and pretrained weights (weights). 
 
 To run the MATLAB script:
 - Install MATLAB ([https://www.mathworks.com](https://www.mathworks.com))
