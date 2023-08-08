@@ -6,7 +6,7 @@ Author List: Alejandro Albizu, Paulo Suen, Ziqian Huang, Jori L. Waner, Skylar E
 ## Data Availability
 The data of this study are publicly available at ().
 
-All analyses were proerfomed using the available toolboxes: MATLAB R2022a ([https://www.mathworks.com](https://www.mathworks.com)), FreeSurfer Version 7.1.1 for Segmentation ([http://freesurfer.net](http://freesurfer.net)), ROAST for FEM ([https://www.parralab.org/roast/](https://www.parralab.org/roast/)), and SPM12 for Image Registration ([https://www.fil.ion.ucl.ac.uk/spm/software/spm12/](https://www.fil.ion.ucl.ac.uk/spm/software/spm12/)).
+All analyses were proerfomed using the available toolboxes: MATLAB R2022a ([https://www.mathworks.com](https://www.mathworks.com)), FreeSurfer Version 7.1.1 for Resampling ([http://freesurfer.net](http://freesurfer.net)), SimNIBS for Segmentation ([https://simnibs.github.io/simnibs/build/html/index.html](https://simnibs.github.io/simnibs/build/html/index.html)), ROAST for FEM ([https://www.parralab.org/roast/](https://www.parralab.org/roast/)), and SPM12 for Image Registration ([https://www.fil.ion.ucl.ac.uk/spm/software/spm12/](https://www.fil.ion.ucl.ac.uk/spm/software/spm12/)).
 
 Statistical Analyses and Source Data
 
