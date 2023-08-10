@@ -19,7 +19,7 @@ To run the MATLAB script:
 - Run the Script
 
 ## License
-See LICENSE.md for details
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License. See LICENSE.md for details
 
 This software uses free packages from the internet, except MATLAB, which is a proprietary software by the MathWorks. You need a valid MATLAB licesne to run this software.
 
