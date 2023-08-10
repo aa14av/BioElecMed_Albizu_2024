@@ -2,7 +2,7 @@ function [stats,fl,c] = plotPerf(perf,dtypes,color)
     N = 10; 
     int = 100; % # of interpolation steps
     intervals = linspace(0,1,int); % Plot Interval
-
+    sc = [1 3 2];
 
     % Plot Data Type ROC Curve Comparison
     figure;        
@@ -30,7 +30,7 @@ function [stats,fl,c] = plotPerf(perf,dtypes,color)
         end
         mean_curve = mean_curve./N;
         fl(d) = plot(intervals',mean_curve');
-        fl(d).Color = color(:,:,d);
+        fl(d).Color = color(:,:,sc(d));
         fl(d).LineWidth = 3;
         hold on
     end
@@ -51,7 +51,7 @@ function [stats,fl,c] = plotPerf(perf,dtypes,color)
         data(:,d) = perf.(dtypes{d}).AUC;
         b2 = bar(d,mean(data(:,d)),'FaceColor','none','LineWidth',3,'FaceAlpha',0,'EdgeAlpha',.6);
         hold on;
-        b2.EdgeColor = color(:,:,d);
+        b2.EdgeColor = color(:,:,sc(d));
 
     end
     hold on
