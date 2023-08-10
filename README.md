@@ -17,3 +17,15 @@ To run the MATLAB script:
 - Clone the current repository to your working directory
 - Change Directories to the cloned directory
 - Run the Script
+
+## License
+See LICENSE.md for details
+
+This software uses free packages from the internet, except MATLAB, which is a proprietary software by the MathWorks. You need a valid MATLAB licesne to run this software.
+
+©Copyright 2023 University of Florida Research Foundation, Inc. 
+All Rights Reserved.
+
+Alejandro Albizu, University of Florida
+aa14av@gmail.com
+August 2023
