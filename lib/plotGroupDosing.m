@@ -1,4 +1,35 @@
-function stats = plotGroupDosing(J_R,J_NR,J_P,umask,w,dims,color)
+% Plot Precision Dosing
+%----------------------------------------
+% Description:
+% This function visualizes and analyzes AI-optimized non-invasive brain
+% stimulation dosing for major depression.
+%
+% Input Arguments:
+% - J_R: Response data matrix
+% - J_NR: Non-response data matrix
+% - J_P: Precision dosing data matrix
+% - mask: Mask for removing non-brain regions
+% - w: Weighting vector
+% - dims: Dimensions of the data 
+% - color: Color scheme for visualization
+%
+% Output:
+% - stats: Contains statistical information about the dosing data.
+%
+% Usage:
+% stats = plotGroupDosing(J_R, J_NR, J_P, umask, w, dims, color);
+%
+% Note:
+% Ensure that the input data matrices (J_R, J_NR, J_P) have the same dimensions.
+%
+%----------------------------------------
+% Created By: Alejandro Albizu
+% Center for Cognitive Aging and Memory
+% University of Florida
+% Creation Date: 8/8/2023
+%----------------------------------------
+% Last Updated: 8/14/2023 by AA
+function stats = plotGroupDosing(J_R,J_NR,J_P,mask,w,dims,color)
     Nvox = prod(dims); % Number of Voxels
     nd = size(J_R,2)/Nvox; % # Dimensions
     title_font = 14;
@@ -6,16 +37,16 @@ function stats = plotGroupDosing(J_R,J_NR,J_P,umask,w,dims,color)
     
     % Concat Data
     J_raw = [J_R;J_NR;J_P];
-    J_raw(:,~umask) = NaN;
+    J_raw(:,~mask) = NaN;
 
     % PCA
     J_R(isnan(J_R)) = 0; % Remove NaN for PCAcolor(:,:,2) = [0 .447 .741]; % Blue
     J_NR(isnan(J_NR)) = 0; % Remove NaN for PCA
     J_P(isnan(J_P)) = 0; % Remove NaN for PCA
-    [coeff,score,~,~,expl,MU] = pca(J_R(:,umask));
+    [coeff,score,~,~,expl,MU] = pca(J_R(:,mask));
     J_all = [score;
-        (J_NR(:,umask)-MU)*coeff;
-        (J_P(:,umask)-MU)*coeff];
+        (J_NR(:,mask)-MU)*coeff;
+        (J_P(:,mask)-MU)*coeff];
     J_R(J_R == 0) = NaN; % Remove Missing
     J_NR(J_NR == 0) = NaN; % Remove Missing 
     J_P(J_P == 0) = NaN; % Remove Missing

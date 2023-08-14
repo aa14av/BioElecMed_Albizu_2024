@@ -1,3 +1,34 @@
+% Plot SVM Performance
+%----------------------------------------
+% Description:
+% This function visualizes the SVM performance for AI-optimized non-invasive 
+% brain stimulation dosing and treatment response prediction for major depression.
+% It provides plots for ROC curves, AUC comparisons, and confusion matrices.
+%
+% Input Arguments:
+% - perf: Struct containing performance metrics for each data type, 
+%         including FPR, TPR, AUC, scores, and target labels.
+% - dtypes: Cell array containing the names of the data types to be processed and plotted.
+% - color: 3D matrix specifying color mapping for different data types.
+%
+% Output:
+% - stats: Statistical information on the AUC differences across data types.
+% - fl: Handles to the ROC curve plots.
+% - c: Handle to the diagonal reference line in the ROC plot.
+%
+% Usage:
+% [stats,fl,c] = plotPerf(perf, dtypes, color);
+%
+% Note:
+% Ensure that all input structures, cell arrays, and matrices are correctly aligned.
+%
+%----------------------------------------
+% Created By: Alejandro Albizu
+% Center for Cognitive Aging and Memory
+% University of Florida
+% Creation Date: 8/8/2023
+%----------------------------------------
+% Last Updated: 8/14/2023 by AA
 function [stats,fl,c] = plotPerf(perf,dtypes,color)
     N = 10; 
     int = 100; % # of interpolation steps

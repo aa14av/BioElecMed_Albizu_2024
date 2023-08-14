@@ -1,13 +1,35 @@
 % Interpret SVM Weights
-% Artificial Intelligence-Optimized Non-Invasive Brain Stimulation 
-% and Treatment Response Prediction for Major Depression
 %----------------------------------------
-% Created By Alejandro Albizu
+% Description:
+% This function interprets the SVM weights for AI-optimized non-invasive 
+% brain stimulation dosing and treatment response prediction for major depression. 
+% It includes visualizations, statistical analyses, and ranking of regions of interest.
+%
+% Input Arguments:
+% - data: Durrent density data.
+% - label: Binary label indicating responders (1) and non-responders (-1).
+% - weights: SVM weights for each voxel.
+% - atlas: Atlas used to map regions of interest (ROIs).
+% - lut: Lookup table used to map ROIs to names.
+% - rk: Pre-defined rank of regions to be highlighted in visualization.
+%
+% Output:
+% - stats: Contains statistical information about the data and SVM weights.
+% - roiRank: Ranking table for regions of interest based on SVM weights.
+%
+% Usage:
+% [stats, roiRank] = interpretWeights(data, label, weights, atlas, lut, rk);
+%
+% Note:
+% Ensure that all input matrices and vectors are correctly aligned.
+%
+%----------------------------------------
+% Created By: Alejandro Albizu
 % Center for Cognitive Aging and Memory
 % University of Florida
-% 8/8/2023
+% Creation Date: 8/8/2023
 %----------------------------------------
-% Last Updated: 8/8/2023 by AA
+% Last Updated: 8/14/2023 by AA
 function [stats, roiRank] = interpretWeights(data,label,weights,atlas,lut,rk)
     N = size(data,1);
 
