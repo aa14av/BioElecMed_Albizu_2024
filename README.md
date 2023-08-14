@@ -6,7 +6,7 @@ Author List: Alejandro Albizu, Paulo Suen, Ziqian Huang, Jori L. Waner, Skylar E
 ## Data Availability
 The raw data of this study are available upon reasonable request from the corresponding author. The raw data are not publicly available due to potential identifying information that could compromise participant privacy. Source data are provided with the respository (SourceData.mat) and ([https://doi.org/10.6084/m9.figshare.23946768.v3](https://doi.org/10.6084/m9.figshare.23946768.v3)).
 
-All analyses were proerfomed using the available toolboxes: MATLAB R2022a ([https://www.mathworks.com](https://www.mathworks.com)), FreeSurfer Version 7.1.1 for Resampling ([http://freesurfer.net](http://freesurfer.net)), SimNIBS for Segmentation ([https://simnibs.github.io/simnibs/build/html/index.html](https://simnibs.github.io/simnibs/build/html/index.html)), ROAST for FEM ([https://www.parralab.org/roast/](https://www.parralab.org/roast/)), and SPM12 for Image Registration ([https://www.fil.ion.ucl.ac.uk/spm/software/spm12/](https://www.fil.ion.ucl.ac.uk/spm/software/spm12/)).
+All analyses were proerfomed using the available toolboxes: MATLAB R2022a ([https://www.mathworks.com](https://www.mathworks.com)), FreeSurfer Version 7.1.1 for Resampling ([http://freesurfer.net](http://freesurfer.net)), headreco from SimNIBS v3.2.1 for Segmentation ([https://simnibs.github.io/simnibs/build/html/index.html](https://simnibs.github.io/simnibs/build/html/index.html)), ROAST v3.0 for FEM ([https://www.parralab.org/roast/](https://www.parralab.org/roast/)), and SPM12 for Image Registration ([https://www.fil.ion.ucl.ac.uk/spm/software/spm12/](https://www.fil.ion.ucl.ac.uk/spm/software/spm12/)).
 
 Statistical Analyses and Source Data
 
