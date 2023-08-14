@@ -16,7 +16,6 @@ To run the MATLAB script:
 - Change Directories to the cloned directory
 - Run the Script
 
-Alejandro Albizu
-University of Florida
-aa14av@gmail.com
+Alejandro Albizu, University of Florida<br>
+aa14av@gmail.com<br>
 August 2023
