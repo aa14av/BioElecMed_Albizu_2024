@@ -7,7 +7,7 @@
 % University of Florida
 % 8/8/2023
 %----------------------------------------
-% Last Updated: 8/10/2023 by AA
+% Last Updated: 8/14/2023 by AA
 clear; clc; restoredefaultpath; 
 rootDir = setup; addpath(genpath(rootDir));
 
@@ -18,10 +18,18 @@ color(:,:,2) = [.635 .078 .184]; % Red
 color(:,:,3) = [0 .447 .741]; % Blue
 dims = [182 218 182]; % Normalized Image Dimensions
 dtypes = {'DI','D','I'}; % Three Data Types
+local_filename = fullfile(rootDir,'SourceData_Large.mat'); % Local filename to save the downloaded data
 %----------------------------------------
+
+% Figshare File URL
+url = 'https://figshare.com/ndownloader/files/41997918';
+
+% Download the file (this will take a few minutes)
+if ~exist(local_filename,'file'); websave(local_filename, url); end
 
 % Load Source Data
 load(fullfile(rootDir,'SourceData.mat'));
+load(local_filename);
 
 % Plot Model Performance
 [perfstats,fl,c] = plotPerf(perf,dtypes,color);
@@ -36,6 +44,6 @@ lut = readtable(fullfile(rootDir,'lib','atlas.txt'),'ReadVariableNames',false);
 [weightstats, roiRank] = interpretWeights(data,label,weights,atlas,lut,1:10);
 
 % Plot Precision Dose Results
-precisionstats = plotGroupDosing(PD(find(label==1)+6,:), ...
-    PD(find(label==-1)+6,:),PD(1:6,:),PD(end-1,:)==1,PD(end,:)',dims,color);
+precisionstats = plotGroupDosing(doses(find(label==1)+6,:), ...
+    doses(find(label==-1)+6,:),doses(1:6,:),doses(end-1,:)==1,doses(end,:)',dims,color);
 disp 'All Done !'
