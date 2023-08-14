@@ -1,5 +1,4 @@
 # Artificial Intelligence-Optimized Non-Invasive Brain Stimulation and Treatment Response Prediction for Major Depression 
---
 Author List: Alejandro Albizu, Paulo Suen, Ziqian Huang, Jori L. Waner, Skylar E. Stolte, Aprinda Indahlastari, Ruogu Fang, Andre R. Brunoni, & Adam J. Woods 
 
 ## Data Availability
