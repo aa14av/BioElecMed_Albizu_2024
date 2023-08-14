@@ -177,9 +177,9 @@ function stats = plotGroupDosing(J_R,J_NR,J_P,umask,w,dims,color)
     % Scatter
     s9=subplot(3,3,9); 
     scolor = sqrt(sum(reshape(w',[Nvox nd])'.^2,'omitnan'));
-    rmu = mean(J_mag(cidx==0,scolor~=0),'omitnan'); rmu(rmu==0) = NaN;
-    nmu = mean(J_mag(cidx==1,scolor~=0),'omitnan'); nmu(nmu==0) = NaN;
-    pmu = mean(J_mag(cidx==2,scolor~=0),'omitnan'); pmu(pmu==0) = NaN;
+    rmu = median(J_mag(cidx==0,scolor~=0),'omitnan'); rmu(rmu==0) = NaN;
+    nmu = median(J_mag(cidx==1,scolor~=0),'omitnan'); nmu(nmu==0) = NaN;
+    pmu = median(J_mag(cidx==2,scolor~=0),'omitnan'); pmu(pmu==0) = NaN;
     scatter(rmu,pmu,10,scolor(scolor~=0),'filled');
     colormap(s9,'turbo'); alpha(s9,0.4);
     xlim([0 0.1]); ylim([0 0.1]); 
@@ -234,7 +234,7 @@ function stats = plotGroupDosing(J_R,J_NR,J_P,umask,w,dims,color)
     legend([h1(2),h2(2),h3(2)],{'Responder Mean',...
         'Non-Responder Mean','Optimized Mean'},'fontname',...
         'arial','fontsize',12,'fontweight','bold')
-    [MI,NMI]=mi(d1',d3');
+    [MI,NMI]=mi(d1,d3,10000);
     annotation('textbox',[.7 .37 .1 .1],'String',...
         sprintf(['Average Normalized Mutual\n', ...
         'Information = %s%% (%s bits)'],...
