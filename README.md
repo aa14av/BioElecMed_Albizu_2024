@@ -1,5 +1,5 @@
-# Nature Communications (Albizu et al. 2023)
-Artificial Intelligence-Optimized Non-Invasive Brain Stimulation and Treatment Response Prediction for Major Depression 
+# Artificial Intelligence-Optimized Non-Invasive Brain Stimulation and Treatment Response Prediction for Major Depression 
+Nature Communications (Albizu et al. 2023)
 --
 Author List: Alejandro Albizu, Paulo Suen, Ziqian Huang, Jori L. Waner, Skylar E. Stolte, Aprinda Indahlastari, Ruogu Fang, Andre R. Brunoni, & Adam J. Woods 
 
