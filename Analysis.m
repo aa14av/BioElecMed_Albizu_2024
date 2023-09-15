@@ -1,4 +1,4 @@
-%% Code Availability for Nature Communications
+%% Code Availability for Brain Stimulation
 % Artificial Intelligence-Optimized Non-Invasive Brain Stimulation 
 % and Treatment Response Prediction for Major Depression
 %----------------------------------------
