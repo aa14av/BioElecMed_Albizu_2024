@@ -1,5 +1,5 @@
-%% Code Availability for Brain Stimulation
-% Artificial Intelligence-Optimized Non-Invasive Brain Stimulation 
+%% Code Availability for Submission
+% Artificial Intelligence-Optimized Non-Invasive
 % and Treatment Response Prediction for Major Depression
 %----------------------------------------
 % Created By Alejandro Albizu
